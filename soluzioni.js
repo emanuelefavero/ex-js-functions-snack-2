@@ -18,7 +18,7 @@ export const sommaArrow = (a, b) => a + b;
 // console.log('sommaArrow:', sommaArrow(2, 3)); // 5
 
 // SNACK 2
-export const quadrato = (n) => n * n;
+export const quadrato = n => n * n;
 
 // console.log(quadrato(4)); // 16
 
@@ -31,14 +31,14 @@ export const eseguiOperazione = (a, b, op) => op(a, b);
 // console.log(eseguiOperazione(3, 4, moltiplica)); // 12
 
 // SNACK 4
-export const creaTimer = (ms) => () =>
+export const creaTimer = ms => () =>
   setTimeout(() => console.log('Tempo scaduto!'), ms);
 
 // const timer = creaTimer(200);
 // timer(); // Dopo 200ms verrà stampato "creaTimer: Tempo scaduto!"
 
 // SNACK 5
-export const stampaOgniSecondo = (msg) =>
+export const stampaOgniSecondo = msg =>
   setInterval(() => {
     console.log(msg);
   }, 1000);
@@ -47,7 +47,7 @@ export const stampaOgniSecondo = (msg) =>
 // setTimeout(() => clearInterval(intervalId), 3000); // stop dopo 3 secondi
 
 // SNACK 6
-export const creaContatoreAutomatico = (ms) => {
+export const creaContatoreAutomatico = ms => {
   let counter = 0;
 
   return () =>
@@ -78,7 +78,7 @@ export const eseguiEFerma = (msg, intervalMs, stopMs) => {
 // BONUS
 
 // SNACK 8
-export const contoAllaRovescia = (n) => {
+export const contoAllaRovescia = n => {
   console.log(n);
 
   const intervalId = setInterval(() => {
