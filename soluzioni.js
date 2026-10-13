@@ -95,3 +95,20 @@ const contoAllaRovescia = (n) => {
 };
 
 contoAllaRovescia(5);
+
+// Snack 9
+const sequenzaOperazioni = (operazioni, ms) => {
+  operazioni.forEach((op, index) => {
+    if (index === 0) op();
+    else setTimeout(op, ms * index);
+  });
+};
+
+sequenzaOperazioni(
+  [
+    () => console.log('sequenzaOperazioni:', 'Operazione 1'),
+    () => console.log('sequenzaOperazioni:', 'Operazione 2'),
+    () => console.log('sequenzaOperazioni:', 'Operazione 3'),
+  ],
+  2000,
+);
