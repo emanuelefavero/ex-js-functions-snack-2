@@ -10,9 +10,7 @@ Con Node.js e npm installati, dalla cartella del progetto:
 npm run dev
 ```
 
-Lo script esegue `soluzioni.js` in modalità watch e riavvia l'esecuzione quando salvi le modifiche. L'output appare nel terminale; per interrompere premi `Ctrl+C`.
-
-Le soluzioni sono scritte in [soluzioni.js](soluzioni.js).
+Lo script esegue [soluzioni.js](soluzioni.js), dove sono presenti le soluzioni agli esercizi.
 
 ## Esercizi
 
