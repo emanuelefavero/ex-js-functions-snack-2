@@ -1,6 +1,6 @@
 /** @fileoverview Soluzioni degli esercizi (snacks). */
 
-console.log('De-commenta i test di questo file per verificare le soluzioni');
+console.log('De-commenta i tests di questo file per verificare le soluzioni');
 
 // SNACK 1
 export function sommaDichiarativa(a, b) {
