@@ -112,3 +112,28 @@ sequenzaOperazioni(
   ],
   2000,
 );
+
+// Snack 10
+const creaThrottler = (fn, limit) => {
+  let blocked = false;
+
+  return () => {
+    if (blocked) return;
+
+    fn();
+    blocked = true;
+
+    setTimeout(() => {
+      blocked = false;
+    }, limit);
+  };
+};
+
+const throttledLog = creaThrottler(
+  () => console.log('creaThrottler:', 'Eseguito!'),
+  2000,
+);
+
+throttledLog(); // ✅
+throttledLog(); // ❌
+setTimeout(throttledLog, 2500); // ✅ (chiamato dopo 2.5 secondi)
