@@ -28,3 +28,12 @@ console.log(
   'eseguiOperazione (moltiplica):',
   eseguiOperazione(3, 4, moltiplica),
 );
+
+// Snack 4
+const creaTimer = (ms) => () =>
+  setTimeout(() => console.log('Tempo scaduto!'), ms);
+
+const timer = creaTimer(200);
+
+console.log('creaTimer:');
+timer();
