@@ -74,3 +74,24 @@ const eseguiEFerma = (msg, intervalMs, stopMs) => {
 };
 
 eseguiEFerma('eseguiEFerma', 1000, 3000);
+
+// --------------------
+// BONUS
+
+// Snack 8
+const contoAllaRovescia = (n) => {
+  console.log('contoAllaRovescia:', n);
+
+  const intervalId = setInterval(() => {
+    n--;
+
+    if (n < 1) {
+      clearInterval(intervalId);
+      console.log('Tempo scaduto!');
+    } else {
+      console.log('contoAllaRovescia:', n);
+    }
+  }, 1000);
+};
+
+contoAllaRovescia(5);
