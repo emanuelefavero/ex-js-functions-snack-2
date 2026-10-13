@@ -60,3 +60,17 @@ const contatore = creaContatoreAutomatico(1000);
 const contatoreId = contatore();
 
 setTimeout(() => clearInterval(contatoreId), 3000);
+
+// Snack 7
+const eseguiEFerma = (msg, intervalMs, stopMs) => {
+  const intervalId = setInterval(() => {
+    console.log(msg);
+  }, intervalMs);
+
+  setTimeout(() => {
+    clearInterval(intervalId);
+    console.log('Timer fermato');
+  }, stopMs);
+};
+
+eseguiEFerma('eseguiEFerma', 1000, 3000);
