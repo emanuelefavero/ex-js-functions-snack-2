@@ -35,5 +35,13 @@ const creaTimer = (ms) => () =>
 
 const timer = creaTimer(200);
 
-console.log('creaTimer:');
 timer();
+
+// Snack 5
+const stampaOgniSecondo = (msg) =>
+  setInterval(() => {
+    console.log(msg);
+  }, 1000);
+
+const intervalId = stampaOgniSecondo('...');
+setTimeout(() => clearInterval(intervalId), 3000);
