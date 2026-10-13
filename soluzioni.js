@@ -20,22 +20,19 @@ export const sommaArrow = (a, b) => a + b;
 // SNACK 2
 export const quadrato = (n) => n * n;
 
-// console.log('quadrato:', quadrato(4)); // 16
+// console.log(quadrato(4)); // 16
 
 // SNACK 3
 export const eseguiOperazione = (a, b, op) => op(a, b);
 
 // const somma = (a, b) => a + b;
 // const moltiplica = (a, b) => a * b;
-// console.log('eseguiOperazione (somma):', eseguiOperazione(3, 4, somma)); // 7
-// console.log(
-//   'eseguiOperazione (moltiplica):',
-//   eseguiOperazione(3, 4, moltiplica), // 12
-// );
+// console.log(eseguiOperazione(3, 4, somma)); // 7
+// console.log(eseguiOperazione(3, 4, moltiplica)); // 12
 
 // SNACK 4
 export const creaTimer = (ms) => () =>
-  setTimeout(() => console.log('creaTimer:', 'Tempo scaduto!'), ms);
+  setTimeout(() => console.log('Tempo scaduto!'), ms);
 
 // const timer = creaTimer(200);
 // timer(); // Dopo 200ms verrà stampato "creaTimer: Tempo scaduto!"
@@ -43,7 +40,7 @@ export const creaTimer = (ms) => () =>
 // SNACK 5
 export const stampaOgniSecondo = (msg) =>
   setInterval(() => {
-    console.log('stampaOgniSecondo:', msg);
+    console.log(msg);
   }, 1000);
 
 // const intervalId = stampaOgniSecondo('...'); // ... ogni secondo
@@ -55,7 +52,7 @@ export const creaContatoreAutomatico = (ms) => {
 
   return () =>
     setInterval(() => {
-      console.log('creaContatoreAutomatico:', ++counter);
+      console.log(++counter);
     }, ms);
 };
 
@@ -82,7 +79,7 @@ export const eseguiEFerma = (msg, intervalMs, stopMs) => {
 
 // SNACK 8
 export const contoAllaRovescia = (n) => {
-  console.log('contoAllaRovescia:', n);
+  console.log(n);
 
   const intervalId = setInterval(() => {
     n--;
@@ -91,7 +88,7 @@ export const contoAllaRovescia = (n) => {
       clearInterval(intervalId);
       console.log('Tempo scaduto!');
     } else {
-      console.log('contoAllaRovescia:', n);
+      console.log(n);
     }
   }, 1000);
 };
@@ -108,9 +105,9 @@ export const sequenzaOperazioni = (operazioni, ms) => {
 
 // sequenzaOperazioni(
 //   [
-//     () => console.log('sequenzaOperazioni:', 'Operazione 1'),
-//     () => console.log('sequenzaOperazioni:', 'Operazione 2'),
-//     () => console.log('sequenzaOperazioni:', 'Operazione 3'),
+//     () => console.log('Operazione 1'),
+//     () => console.log('Operazione 2'),
+//     () => console.log('Operazione 3'),
 //   ],
 //   2000,
 // ); // Esegue le operazioni in sequenza ogni 2 secondi
@@ -131,10 +128,7 @@ export const creaThrottler = (fn, limit) => {
   };
 };
 
-// const throttledLog = creaThrottler(
-//   () => console.log('creaThrottler:', 'Eseguito!'),
-//   2000,
-// );
+// const throttledLog = creaThrottler(() => console.log('Eseguito!'), 2000);
 
 // throttledLog(); // ✅
 // throttledLog(); // ❌
