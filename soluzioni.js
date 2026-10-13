@@ -120,8 +120,8 @@ const creaThrottler = (fn, limit) => {
   return () => {
     if (blocked) return;
 
-    fn();
     blocked = true;
+    fn();
 
     setTimeout(() => {
       blocked = false;
