@@ -17,3 +17,14 @@ console.log('sommaArrow:', sommaArrow(2, 3));
 const quadrato = (n) => n * n;
 
 console.log('quadrato:', quadrato(4));
+
+// Snack 3
+const somma = (a, b) => a + b;
+const moltiplica = (a, b) => a * b;
+const eseguiOperazione = (a, b, op) => op(a, b);
+
+console.log('eseguiOperazione (somma):', eseguiOperazione(3, 4, somma));
+console.log(
+  'eseguiOperazione (moltiplica):',
+  eseguiOperazione(3, 4, moltiplica),
+);
