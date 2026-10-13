@@ -18,7 +18,7 @@ export const sommaArrow = (a, b) => a + b;
 // console.log('sommaArrow:', sommaArrow(2, 3)); // 5
 
 // SNACK 2
-export const quadrato = n => n * n;
+export const quadrato = n => n ** 2;
 
 // console.log(quadrato(4)); // 16
 
