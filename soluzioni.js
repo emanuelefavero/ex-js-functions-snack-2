@@ -31,7 +31,7 @@ console.log(
 
 // Snack 4
 const creaTimer = (ms) => () =>
-  setTimeout(() => console.log('Tempo scaduto!'), ms);
+  setTimeout(() => console.log('creaTimer:', 'Tempo scaduto!'), ms);
 
 const timer = creaTimer(200);
 
@@ -40,8 +40,23 @@ timer();
 // Snack 5
 const stampaOgniSecondo = (msg) =>
   setInterval(() => {
-    console.log(msg);
+    console.log('stampaOgniSecondo:', msg);
   }, 1000);
 
 const intervalId = stampaOgniSecondo('...');
 setTimeout(() => clearInterval(intervalId), 3000);
+
+// Snack 6
+const creaContatoreAutomatico = (ms) => {
+  let counter = 0;
+
+  return () =>
+    setInterval(() => {
+      console.log('creaContatoreAutomatico:', ++counter);
+    }, ms);
+};
+
+const contatore = creaContatoreAutomatico(1000);
+const contatoreId = contatore();
+
+setTimeout(() => clearInterval(contatoreId), 3000);
