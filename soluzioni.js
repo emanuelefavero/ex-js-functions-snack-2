@@ -114,17 +114,15 @@ export const sequenzaOperazioni = (operazioni, ms) => {
 
 // SNACK 10
 export const creaThrottler = (fn, limit) => {
-  let blocked = false;
+  let ultimaEsecuzione = 0;
 
-  return () => {
-    if (blocked) return;
+  return (...args) => {
+    const adesso = Date.now();
 
-    blocked = true;
-    fn();
+    if (adesso - ultimaEsecuzione < limit) return;
 
-    setTimeout(() => {
-      blocked = false;
-    }, limit);
+    ultimaEsecuzione = adesso;
+    return fn(...args);
   };
 };
 
