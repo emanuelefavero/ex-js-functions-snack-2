@@ -97,10 +97,7 @@ export const contoAllaRovescia = n => {
 
 // SNACK 9
 export const sequenzaOperazioni = (operazioni, ms) => {
-  operazioni.forEach((op, index) => {
-    if (index === 0) op();
-    else setTimeout(op, ms * index);
-  });
+  operazioni.forEach((op, index) => setTimeout(op, ms * index));
 };
 
 // sequenzaOperazioni(
